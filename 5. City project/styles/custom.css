@@ -1,0 +1,127 @@
+a.active,
+a.active:visited {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.button--ghost {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.city-search {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.city-search__intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.city-search__title {
+    margin-bottom: 0.25rem;
+}
+
+.city-search__subtitle {
+    margin: 0;
+    color: var(--text-light);
+}
+
+.city-search__back {
+    align-self: center;
+}
+
+.city-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.city-card {
+    background: var(--accent-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--standard-border-radius);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.city-card__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.city-card__name {
+    font-weight: bold;
+    color: var(--text);
+}
+
+.city-card__country,
+.city-card__population {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.city-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.city-card:hover .city-card__name {
+    color: var(--accent);
+}
+
+.city-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+    gap: 1rem;
+}
+
+.city-pagination__info {
+    color: var(--text-light);
+}
+
+.city-pagination__actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.city-details__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+    .city-search__intro {
+        flex-direction: column;
+    }
+
+    .city-search__back {
+        align-self: flex-start;
+    }
+
+    .city-pagination {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .city-pagination__actions {
+        width: 100%;
+    }
+}
