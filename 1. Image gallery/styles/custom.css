@@ -1,0 +1,62 @@
+/* Add custom rules here... */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item {
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item h3 {
+    margin: 0;
+    color: var(--bg);
+    background-color: var(--accent);
+    font-size: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1920/1440;
+    object-fit: cover;
+}
+
+.image-display-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.image-display {
+    display: block;
+    max-width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: var(--bg);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.back-link:hover {
+    background-color: var(--accent-bg);
+    color: var(--accent);
+}
