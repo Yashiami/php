@@ -40,7 +40,6 @@ if (!empty($_POST)) {
         }
     }
 
-    // Use PostgreSQL-compatible identifiers (no backticks)
     $stmt = $pdo->prepare('INSERT INTO entries (title, date, message, image) VALUES (:title, :date, :message, :image)');
     $stmt->bindValue(':title', $title);
     $stmt->bindValue(':date', $date);
